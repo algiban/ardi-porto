@@ -10,7 +10,7 @@ export default function ProductsClient() {
     return <div className="py-20 text-center text-gray-300">Loading...</div>;
 
   return (
-    <div className="container mx-auto px-4 py-12 mt-10 text-center">
+    <div className="container mx-auto px-4 py-12 mt-15 text-center">
       <h1 className="text-3xl font-bold text-amber-400 mb-6">
         {texts.text_produk1 || "Produk Kami"}
       </h1>

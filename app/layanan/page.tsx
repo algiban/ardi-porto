@@ -8,7 +8,7 @@ export default function LayananPage() {
 
 
   return (
-    <div className="container mx-auto px-6 py-16 mt-10 ">
+    <div className="container mx-auto px-6 py-16 mt-15 ">
       <h1 className="text-4xl font-extrabold text-amber-400 mb-8 text-center">
         {texts.text_l_kami1 || (lang === "en" ? "Our Services" : "Layanan Kami")}
       </h1>

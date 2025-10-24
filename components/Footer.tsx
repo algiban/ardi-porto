@@ -34,21 +34,21 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold mb-2">Navigasi</h4>
           <ul className="space-y-1 text-sm">
-            <li><Link href="/">Beranda</Link></li>
-            <li><Link href="/products">Produk</Link></li>
-            <li><Link href="/about">Tentang</Link></li>
-            <li><Link href="/contact">Kontak</Link></li>
+            <li><Link href="/">{texts?.beranda || "Beranda"}</Link></li>
+            <li><Link href="/products">{texts?.produk||"Produk"}</Link></li>
+            <li><Link href="/about">{texts?.tentang||"Tentang"}</Link></li>
+            <li><Link href="/contact">{texts?.kontak||"Kontak"}</Link></li>
           </ul>
         </div>
 
         {/* Kolom 3: Kontak */}
         <div>
-          <h4 className="font-semibold mb-2">Kontak</h4>
+          <h4 className="font-semibold mb-2">{texts?.kontak||"Kontak"}</h4>
           <ul className="text-sm space-y-1">
             <li>Email: <a href="mailto:info@ardinm.com" className="underline">info@ardinm.com</a></li>
-            <li>Telp: +62 812-3456-7890</li>
+            <li>Telp: +62 858-8036-0594</li>
             <li>
-              WhatsApp: <a href="https://wa.me/6281234567890" className="underline">Hubungi kami</a>
+              WhatsApp: <a href="https://wa.me/6285880360594" className="underline">{texts?.text_btn1||"Hubungi Kami"}</a>
             </li>
           </ul>
         </div>

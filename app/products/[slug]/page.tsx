@@ -116,7 +116,7 @@ export default async function ProductPage({
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 ">
+    <div className="container mx-auto px-4 py-8 mt-15 ">
       <div className="flex flex-col md:flex-row md:items-start md:gap-10">
         {/* Kiri: Slider gambar */}
         <div className="md:w-1/2 rounded">

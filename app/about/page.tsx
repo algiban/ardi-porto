@@ -7,7 +7,7 @@ export default function AboutPage() {
   if (loading) return <div className="py-20 text-center text-gray-300">Loading...</div>;
 
   return (
-    <div className="container mx-auto px-6 py-16 mt-10">
+    <div className="container mx-auto px-6 py-16 mt-15">
       {/* Judul */}
       <h1 className="text-4xl font-extrabold text-amber-400 mb-8 text-center">
         {texts.text_t_kami1 || "Tentang Kami"}
