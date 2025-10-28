@@ -1,24 +1,50 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
+import withBundleAnalyzer from '@next/bundle-analyzer'
 
 const nextConfig: NextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+
   images: {
-  remotePatterns: [
-    {
-      protocol: 'https',
-      hostname: 'unit-testing.newtcugapps.com',
-      pathname: '/uploads/products/**',
-    },
-    {
-      protocol: 'http',
-      hostname: 'localhost',
-      pathname: '/uploads/products/**',
-    },
-  ],
-},
-  experimental: {
-    reactCompiler: false, // tambahkan ini untuk menonaktifkan compiler experimental
+    formats: ['image/avif', 'image/webp'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'unit-testing.newtcugapps.com',
+        pathname: '/uploads/products/**',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        pathname: '/uploads/products/**',
+      },
+    ],
   },
 
-};
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
 
-export default nextConfig;
+  experimental: {
+    reactCompiler: false, // biarkan false (masih experimental)
+  },
+
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ]
+  },
+}
+
+
+export default withBundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+})(nextConfig)
