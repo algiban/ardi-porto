@@ -17,7 +17,7 @@ export default function HomeClient() {
       <div className="container mx-auto px-4 pb-10">
         <section className="mt-10 text-center">
           <h2 className="text-4xl font-bold text-amber-500 ">
-            {"Produk Unggulan" || texts.text_beranda16 }
+            {texts.text_beranda16 || "Produk Unggulan"}
           </h2>
           <p className="text-lg text-white max-w-2xl mx-auto">
             {texts.text_beranda17 ||
