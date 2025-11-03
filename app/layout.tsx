@@ -15,7 +15,7 @@ const inter = Inter({
 export const metadata = {
   title: "Ardi Nuansa Mandiri",
   description: "Produsen dan supplier rempah-rempah premium Indonesia.",
-  keywords: ["rempah", "rempah Indonesia", "supplier rempah", "export spice"],
+  keywords: ["rempah", "rempah indonesia", "supplier rempah", "export spice"],
   openGraph: {
     title: "Ardi Nuansa Mandiri",
     description: "Mendistribusikan rempah terbaik Indonesia ke seluruh dunia.",
@@ -42,6 +42,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="preconnect" href="https://unit-testing.newtcugapps.com" />
+        <link rel="icon" href="/logo.png" type="image/x-icon" />
       </head>
 
       <body className="bg-white text-gray-800 antialiased">
